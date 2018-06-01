@@ -10,3 +10,6 @@
 [submodule "vim/plugged/yajs.vim"]
 	path = vim/plugged/yajs.vim
 	url = https://github.com/othree/yajs.vim.git
+[submodule "vim/plugged/vim-jsx"]
+	path = vim/plugged/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
