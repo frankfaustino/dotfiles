@@ -1,0 +1,7 @@
+[submodule "vim/plugged/dracula"]
+	path = vim/plugged/dracula
+	url = https://github.com/dracula/vim.git
+[submodule "vim/plugged/oceanic-next"]
+	path = vim/plugged/oceanic-next
+	url = https://github.com/mhartington/oceanic-next.git
+
