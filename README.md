@@ -1,9 +1,9 @@
 # My dotvim Setup
 
-### Requirements:
+### Requirements
 
-git 2.13.1
-vim 8.1.22
+git 2.13.1  
+vim 8.1.22  
 MacVim
 
 ### Installation
