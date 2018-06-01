@@ -1,0 +1,56 @@
+" vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'mhartington/oceanic-next'
+Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+Plug 'suan/vim-instant-markdown'
+call plug#end()
+
+" Enable syntax highlighting
+syntax on
+
+" Detect filetype
+filetype on
+
+" Enable loading plugin file for specific file types
+filetype plugin on
+
+" Enable loading indent file for specific file types
+filetype indent on
+
+" Show matching brackets and parens
+set showmatch
+
+" Set character encoding to UTF-8
+set encoding=utf-8
+
+" Show 3 lines above or below cursor when scrolling
+set scrolloff=3
+
+set termguicolors
+
+" Turn on line numbers
+set number
+
+" Show line and column number
+set ruler
+
+" Make command line one line high
+set ch=1
+
+" Tabs vs Spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" Color themes
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=None
+" ———————————————————————————————————
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
+" color OceanicNext
+

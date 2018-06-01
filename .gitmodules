@@ -5,3 +5,12 @@
 	path = vim/plugged/oceanic-next
 	url = https://github.com/mhartington/oceanic-next.git
 
+[submodule "vim/plugged/vim-instant-markdown"]
+	path = vim/plugged/vim-instant-markdown
+	url = https://github.com/suan/vim-instant-markdown.git
+[submodule "vim/plugged/vim-jsx"]
+	path = vim/plugged/vim-jsx
+	url = https://github.com/suan/vim-instant-markdown.git
+[submodule "vim/plugged/yajs.vim"]
+	path = vim/plugged/yajs.vim
+	url = https://github.com/othree/yajs.vim.git

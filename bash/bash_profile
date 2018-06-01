@@ -1,0 +1,6 @@
+source ~/.bashrc
+export PS1="\[\e[34m\]λ\[\e[m\] 💰  "
+# export CLICOLOR=1
+# export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
