@@ -5,6 +5,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx'
 Plug 'suan/vim-instant-markdown'
+Plug 'metakirby5/codi.vim'
 call plug#end()
 
 " Enable syntax highlighting

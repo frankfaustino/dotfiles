@@ -13,3 +13,6 @@
 [submodule "vim/plugged/vim-jsx"]
 	path = vim/plugged/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/plugged/codi.vim"]
+	path = vim/plugged/codi.vim
+	url = https://github.com/metakirby5/codi.vim.git
