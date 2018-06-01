@@ -10,6 +10,7 @@ MacVim
 
 ```
 $ git clone https://github.com/lefrenk/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ```
 
 ### Register and clone the Vim bundles
