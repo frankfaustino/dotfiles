@@ -1,20 +1,39 @@
-# My dotvim Setup
+# My vim and bash Setup
+
+```
+      .       .    )        .           .
+   .       *             .         .
+               .                      .
+   .       .                   .
+                                *        .
+      .   '               .              .
+              _.---._   .            .     *
+    *       .'       '.
+        _.-~===========~-._
+       (___________________)       .   *
+  __  .'     \_______/   .'  ______        __
+    |              .'  .'   |      |      |  |
+    |             '         |      |      |  |
+    |                       |      |   ___|  |_
+  __|_______________________|__..--~~~~   ~--.
+
+```
 
 ### Requirements
 
-git — v2.13.1  
-vim — v8.1.22  
+Git — v2.13.1  
+Vim — v8.1.22  
 MacVim
 
 ### Installation
 
-```
+```console
 $ git clone https://github.com/lefrenk/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 ```
 
-### Register and clone the Vim bundles
-```
+### Register and clone the Vim plugins
+```console
 # Register and clone the submodules.
 
 $ git submodule init
@@ -22,21 +41,21 @@ $ git submodule update
 ```
 
 ### Create symlinks
-```
+```console
 $ bash symlinkdafiles.sh
 ```
-_NOTE: Running the symlinkdafiles script will delete (if they already exist) and recreate the symlinks in HOME._
+_NOTE: symlinkdafiles script will delete and recreate the symlinks in HOME._
 
 ### ——— Useful Stuff ———
 
-### Update all submodules at once
-```
+### Update all submodules simultaneously
+```console
 $ cd ~/.dotfiles
 $ git submodule foreach git pull origin master
 ```
 
 ### Adding new submodules
-```
+```console
 # Add the submodule.
 
 $ git submodule add git://example.com/remote/path/to/repo.git vim/plugged/submodule
@@ -47,7 +66,7 @@ $ git add vim/plugged/submodule && git commit -m "Add a new submodule: submodule
 ```
 
 ### Removing a submodule
-```
+```console
 # Delete the relevant section from the .gitmodules file.
 # Stage the .gitmodules changes.
 
@@ -66,4 +85,32 @@ $ git commit -m "Removed submodule"
 # Delete the now untracked submodule files.
 
 $ rm -rf path_to_submodule
+```
+
+### ——— File Structure ———
+
+```
+    ~/.dotfiles
+    ├─┬ bash
+    │ ├── aliases
+    │ ├── bash_profile
+    │ └── bashrc
+    ├─┬ vim
+    │ ├─┬ autoload
+    │ │ └── plug.vim
+    │ ├── gvimrc
+    │ ├─┬ plugged
+    │ │ ├── codi.vim
+    │ │ ├── dracula
+    │ │ ├── indentline
+    │ │ ├── nerdcommenter
+    │ │ ├── nerdtree
+    │ │ ├── oceanic-next
+    │ │ ├── vim-instant-markdown
+    │ │ ├── vim-jsx
+    │ │ ├── vim-prettier
+    │ │ └── yajs.vim
+    │ └── vimrc
+    ├── README.md
+    └── symlinkdafiles.sh
 ```

@@ -11,6 +11,7 @@ Plug 'prettier/vim-prettier', {
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Enable syntax highlighting
@@ -76,5 +77,10 @@ let g:prettier#config#single_quote = 'true'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#trailing_comma = 'none'
 
-" NERD Commenter JavaScript override
+" NERDCommenter
 let g:NERDCustomDelimiters = { 'javascript' : { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' }}
+let g:NERDTrimTrailingWhitespace = 1
+
+" NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
