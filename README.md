@@ -59,11 +59,11 @@ $ git add .gitmodules
 $ git rm --cached path_to_submodule
 $ rm -rf .git/modules/path_to_submodule
 
-# Commit changes
+# Commit changes.
 
 $ git commit -m "Removed submodule"
 
-# Delete the now untracked submodule files
+# Delete the now untracked submodule files.
 
 $ rm -rf path_to_submodule
 ```

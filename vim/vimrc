@@ -9,6 +9,8 @@ Plug 'metakirby5/codi.vim'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+Plug 'yggdroot/indentline'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " Enable syntax highlighting
@@ -58,3 +60,21 @@ highlight Normal ctermbg=None
 " let g:oceanic_next_terminal_italic = 1
 " color OceanicNext
 
+" Indent line characters
+" let g:indentLine_char = '×'
+" let g:indentLine_char = '▸'
+let g:indentLine_char = '⌜'
+" let g:indentLine_char = '▴'
+" let g:indentLine_char = '◜'
+" let g:indentLine_char = '❘'
+" let g:indentLine_char = '⌇'
+" let g:indentLine_char = '⌞'
+
+" Prettier
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#trailing_comma = 'none'
+
+" NERD Commenter JavaScript override
+let g:NERDCustomDelimiters = { 'javascript' : { 'left': '// ', 'leftAlt': '/* ', 'rightAlt': ' */' }}
