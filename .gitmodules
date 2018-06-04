@@ -28,3 +28,6 @@
 [submodule "vim/plugged/nerdtree"]
 	path = vim/plugged/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/plugged/cobalt2-vim-theme"]
+	path = vim/plugged/cobalt2-vim-theme
+	url = https://github.com/GertjanReynaert/cobalt2-vim-theme.git

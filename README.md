@@ -1,5 +1,6 @@
-# My vim and bash Setup
 
+# My Vim and BASH Setup
+[![forthebadge](https://forthebadge.com/images/badges/its-not-a-lie-if-you-believe-it.svg)](https://forthebadge.com)
 ```
       .       .    )        .           .
    .       *             .         .
@@ -114,3 +115,4 @@ $ rm -rf path_to_submodule
     ├── README.md
     └── symlinkdafiles.sh
 ```
+

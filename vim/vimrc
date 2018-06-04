@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'mhartington/oceanic-next'
+Plug 'gertjanreynaert/cobalt2-vim-theme'
 Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx'
 Plug 'suan/vim-instant-markdown'
@@ -53,9 +54,9 @@ set softtabstop=2
 set expandtab
 
 " Color themes
-let g:dracula_italic = 0
-colorscheme dracula
-highlight Normal ctermbg=None
+" let g:dracula_italic = 0
+" highlight Normal ctermbg=None
+colorscheme cobalt2
 " ———————————————————————————————————
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
@@ -72,7 +73,7 @@ let g:indentLine_char = '⌜'
 " let g:indentLine_char = '⌞'
 
 " Prettier
-let g:prettier#config#semi = 'false'
+let g:prettier#config#semi = 'true'
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#trailing_comma = 'none'
