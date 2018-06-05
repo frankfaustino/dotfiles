@@ -31,3 +31,6 @@
 [submodule "vim/plugged/cobalt2-vim-theme"]
 	path = vim/plugged/cobalt2-vim-theme
 	url = https://github.com/GertjanReynaert/cobalt2-vim-theme.git
+[submodule "vim/plugged/vim-fugitive"]
+	path = vim/plugged/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
