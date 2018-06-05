@@ -16,6 +16,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'eslint/eslint'
+Plug 'mattn/emmet-vim'
+Plug 'mattn/webapi-vim'
 call plug#end()
 
 " Enable syntax highlighting
@@ -91,3 +93,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " vim-fugitive
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+
+" emmet-vim
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = { 'javascript.jsx' : { 'extends' : 'jsx' }}
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snippets.json')), "\n"))
