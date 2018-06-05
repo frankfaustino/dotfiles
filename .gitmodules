@@ -37,3 +37,6 @@
 [submodule "vim/plugged/vim-surround"]
 	path = vim/plugged/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/plugged/eslint"]
+	path = vim/plugged/eslint
+	url = https://github.com/eslint/eslint
