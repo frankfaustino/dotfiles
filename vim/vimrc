@@ -14,6 +14,8 @@ Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'eslint/eslint'
 call plug#end()
 
 " Enable syntax highlighting
