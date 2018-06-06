@@ -1,4 +1,3 @@
-
 # My Vim and BASH Setup
 [![forthebadge](https://forthebadge.com/images/badges/its-not-a-lie-if-you-believe-it.svg)](https://forthebadge.com)
 ```
@@ -28,69 +27,65 @@ MacVim
 
 ### Installation
 
-```console
+```bash
 $ git clone https://github.com/lefrenk/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 ```
 
 ### Register and clone the Vim plugins
-```console
-# Register and clone the submodules.
-
+```bash
 $ git submodule init
 $ git submodule update
 ```
 
 ### Create symlinks
-```console
-$ bash symlinkdafiles.sh
+```bash
+# This symlink script will delete and recreate the symlinks in your HOME directory.
+$ bash symlink.sh
 ```
-_NOTE: symlinkdafiles script will delete and recreate the symlinks in HOME._
 
 ### ——— Useful Stuff ———
 
 ### Update all submodules simultaneously
-```console
+```bash
 $ cd ~/.dotfiles
 $ git submodule foreach git pull origin master
 ```
 
 ### Adding new submodules
-```console
+```bash
 # Add the submodule.
-
 $ git submodule add git://example.com/remote/path/to/repo.git vim/plugged/submodule
 
 # Stage && commit the changes.
-
-$ git add vim/plugged/submodule && git commit -m "Add a new submodule: submodule"
+$ git add vim/plugged/submodule && git commit -m "Add submodule"
 ```
 
 ### Removing a submodule
-```console
+```bash
 # Delete the relevant section from the .gitmodules file.
-# Stage the .gitmodules changes.
 
+# Stage the .gitmodules changes.
 $ git add .gitmodules
 
 # Delete the relevant section from .git/config.
-# Delete the submodule from git index and git's modules directory.
 
+# Delete the submodule from git index.
 $ git rm --cached path_to_submodule
+
+# Delete submodule in git's modules directory.
 $ rm -rf .git/modules/path_to_submodule
 
 # Commit changes.
-
 $ git commit -m "Removed submodule"
 
 # Delete the now untracked submodule files.
-
 $ rm -rf path_to_submodule
 ```
 
 ### ——— File Structure ———
 
-```
+```bash
     ~/.dotfiles
     ├─┬ bash
     │ ├── aliases

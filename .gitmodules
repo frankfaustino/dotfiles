@@ -37,12 +37,15 @@
 [submodule "vim/plugged/vim-surround"]
 	path = vim/plugged/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/plugged/eslint"]
-	path = vim/plugged/eslint
-	url = https://github.com/eslint/eslint
 [submodule "vim/plugged/emmet-vim"]
 	path = vim/plugged/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
-[submodule "vim/plugged/webapi-vim"]
-	path = vim/plugged/webapi-vim
-	url = https://github.com/mattn/webapi-vim.git
+[submodule "vim/plugged/ale"]
+	path = vim/plugged/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "vim/plugged/vim-airline"]
+	path = vim/plugged/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/plugged/vim-airline-themes"]
+	path = vim/plugged/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline.git
