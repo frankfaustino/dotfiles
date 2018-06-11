@@ -87,27 +87,37 @@ $ rm -rf path_to_submodule
 
 ```bash
     ~/.dotfiles
+    ├── .gitignore
+    ├── .gitmodules
+    ├── README.md
+    ├── symlink.sh
     ├─┬ bash
     │ ├── aliases
     │ ├── bash_profile
     │ └── bashrc
-    ├─┬ vim
-    │ ├─┬ autoload
-    │ │ └── plug.vim
-    │ ├── gvimrc
-    │ ├─┬ plugged
-    │ │ ├── codi.vim
-    │ │ ├── dracula
-    │ │ ├── indentline
-    │ │ ├── nerdcommenter
-    │ │ ├── nerdtree
-    │ │ ├── oceanic-next
-    │ │ ├── vim-instant-markdown
-    │ │ ├── vim-jsx
-    │ │ ├── vim-prettier
-    │ │ └── yajs.vim
-    │ └── vimrc
-    ├── README.md
-    └── symlinkdafiles.sh
+    └─┬ vim
+      ├─┬ autoload
+      │ └── plug.vim
+      ├── gvimrc
+      ├─┬ plugged
+      │ ├── ale
+      │ ├── cobalt2-vim-theme    
+      │ ├── codi.vim
+      │ ├── dracula
+      │ ├── emmet-vim
+      │ ├── indentline
+      │ ├── nerdcommenter
+      │ ├── nerdtree
+      │ ├── oceanic-next
+      │ ├── ultisnips
+      │ ├── vim-airline
+      │ ├── vim-airline-themes
+      │ ├── vim-fugitive    
+      │ ├── vim-instant-markdown
+      │ ├── vim-jsx
+      │ ├── vim-prettier
+      │ ├── vim-surround
+      │ └── yajs.vim
+      └── vimrc
 ```
 

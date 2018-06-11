@@ -9,8 +9,8 @@ set mouse=a                     "       enable the use of mouse
 set nowrap                      "       soft-wrapping is off by default
 set incsearch                   "       incremental searching
 set hlsearch                    "       highlights search results
-set ch=1                        "       make command line one line high
 set encoding=utf-8              "       set character encoding to UTF-8
+set linespace=3
 set termguicolors               "       uses full 24-bit colors
 set backspace=indent,eol,start  "       delete over line breaks, or automatically-inserted
                                 "       indentation, or the place where insert mode started
@@ -122,8 +122,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " ————— vim-airline ———————————————————————————————————————————————————
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_extensions = ['branch','ale']
+let g:airline_extensions = ['ale', 'branch']
 let g:airline_theme='simple'
+let g:airline#extensions#ale#error_symbol = '🤬 '
+let g:airline#extensions#ale#warning_symbol = '👻 '
 
 " ————— vim-fugitive ——————————————————————————————————————————————————
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
@@ -139,11 +141,10 @@ let g:ale_lint_on_enter = 0
 let g:ale_maximum_file_size = 500000  " don't lint large files (> 500KB), it can slow things down
 let g:ale_linters = {}
 let g:ale_linters.javascript = ['eslint']
-" let g:ale_linters.python = ['flake8']
-" let g:ale_linters.html = []
+let g:ale_linters.typescript = ['tslint', 'tsserver']
 let g:ale_fixers = {}
 let g:ale_fixers.javascript = ['eslint', 'prettier']
-" let g:ale_fixers.python = ['isort']
+let g:ale_fixers.typescript = ['tslint']
 " let g:ale_javascript_prettier_options = ' --single-quote --trailing-comma none'
 
 " ————— Prettier ——————————————————————————————————————————————————————
@@ -151,3 +152,4 @@ let g:prettier#config#semi = 'false'
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#trailing_comma = 'none'
+
