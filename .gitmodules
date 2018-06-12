@@ -52,3 +52,6 @@
 [submodule "vim/plugged/ultisnips"]
 	path = vim/plugged/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/plugged/typescript-vim"]
+	path = vim/plugged/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git

@@ -76,6 +76,7 @@ Plug 'gertjanreynaert/cobalt2-vim-theme' " port of wes bos's cobalt2 theme
 Plug 'bling/vim-airline'              " airline statusbar
 Plug 'vim-airline/vim-airline-themes' " airline statusbar themes
 Plug 'yggdroot/indentline'            " display the indention levels with thin vertical lines
+Plug 'leafgarland/typescript-vim'     " Typescript syntax
 Plug 'othree/yajs.vim'                " yet another JavaScript syntax
 Plug 'mxw/vim-jsx'                    " React JSX syntax lighting/indenting
 Plug 'suan/vim-instant-markdown'      " markdown live previewing

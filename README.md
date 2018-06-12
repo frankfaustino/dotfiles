@@ -109,6 +109,7 @@ $ rm -rf path_to_submodule
       │ ├── nerdcommenter
       │ ├── nerdtree
       │ ├── oceanic-next
+      │ ├── typescript-vim
       │ ├── ultisnips
       │ ├── vim-airline
       │ ├── vim-airline-themes
