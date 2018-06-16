@@ -14,6 +14,9 @@ set linespace=3
 set termguicolors               "       uses full 24-bit colors
 set backspace=indent,eol,start  "       delete over line breaks, or automatically-inserted
                                 "       indentation, or the place where insert mode started
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+                                "       highlights character at 81st column
 
 " ————— Folding ———————————————————————————————————————————————————————
 set foldmethod=syntax           "fdm:   fold by the indentation by default
