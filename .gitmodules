@@ -55,3 +55,6 @@
 [submodule "vim/plugged/typescript-vim"]
 	path = vim/plugged/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/plugged/vim-searchant"]
+	path = vim/plugged/vim-searchant
+	url = https://github.com/timakro/vim-searchant.git

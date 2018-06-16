@@ -86,6 +86,7 @@ Plug 'suan/vim-instant-markdown'      " markdown live previewing
 Plug 'metakirby5/codi.vim'            " live code scratchpad
 Plug 'scrooloose/nerdcommenter'       " comment functions
 Plug 'scrooloose/nerdtree'            " filesystem explorer
+Plug 'timakro/vim-searchant'          " improved search highlighting
 Plug 'tpope/vim-fugitive'             " git wrapper
 Plug 'tpope/vim-surround'             " quoting/parenthesizing made simple
 Plug 'mattn/emmet-vim'                " expands HTML/CSS abbreviations
