@@ -1,29 +1,5 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/frank.faustino/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel9k/powerlevel9k"
-
-# POWERLEVEL9K_MODE="nerdfont-complete"
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user dir_writable dir vcs)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs time disk_usage ram)
-# POWERLEVEL9K_ROOT_ICON="\uF09C"
-# POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
-
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-#POWERLEVEL9K_USER_ICON="\uF415" # 
-#POWERLEVEL9K_SUDO_ICON=$'\uF09C' # 
-#POWERLEVEL9K_VCS_GIT_ICON='\uF408 '
-#POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uF408 '
 
 ZSH_THEME="spaceship"
 SPACESHIP_PROMPT_ADD_NEWLINE="true"
@@ -59,17 +35,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias suroot='sudo -E -s'
 
-# source ~/.bash_profile
-
 if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile;
 fi
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
