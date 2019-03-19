@@ -14,3 +14,5 @@ alias lsa="ls -lGa"
 alias docs="cd ~/Documents"
 alias dt="cd ~/Desktop"
 alias lambda="cd ~/Documents/Lambda-School"
+alias python='python3'
+alias pip='pip3'
