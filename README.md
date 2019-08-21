@@ -21,14 +21,14 @@
 
 ### Requirements
 
-Git — v2.13.1  
+Git — v2.20.1  
 Vim — v8.1.22  
 MacVim
 
 ### Installation
 
 ```bash
-$ git clone https://github.com/lefrenk/dotfiles.git ~/.dotfiles
+$ git clone https://github.com/frankfaustino/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 ```
 
@@ -101,22 +101,20 @@ $ rm -rf path_to_submodule
       ├── gvimrc
       ├─┬ plugged
       │ ├── ale
-      │ ├── cobalt2-vim-theme    
       │ ├── codi.vim
-      │ ├── dracula
       │ ├── emmet-vim
       │ ├── indentline
       │ ├── nerdcommenter
       │ ├── nerdtree
-      │ ├── oceanic-next
       │ ├── typescript-vim
-      │ ├── ultisnips
       │ ├── vim-airline
       │ ├── vim-airline-themes
       │ ├── vim-fugitive    
       │ ├── vim-instant-markdown
       │ ├── vim-jsx
       │ ├── vim-prettier
+      │ ├── vim-searchant
+      │ ├── vim-snazzy
       │ ├── vim-surround
       │ └── yajs.vim
       └── vimrc

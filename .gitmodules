@@ -1,9 +1,3 @@
-[submodule "vim/plugged/dracula"]
-	path = vim/plugged/dracula
-	url = https://github.com/dracula/vim.git
-[submodule "vim/plugged/oceanic-next"]
-	path = vim/plugged/oceanic-next
-	url = https://github.com/mhartington/oceanic-next.git
 [submodule "vim/plugged/vim-instant-markdown"]
 	path = vim/plugged/vim-instant-markdown
 	url = https://github.com/suan/vim-instant-markdown.git
@@ -28,9 +22,6 @@
 [submodule "vim/plugged/nerdtree"]
 	path = vim/plugged/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/plugged/cobalt2-vim-theme"]
-	path = vim/plugged/cobalt2-vim-theme
-	url = https://github.com/GertjanReynaert/cobalt2-vim-theme.git
 [submodule "vim/plugged/vim-fugitive"]
 	path = vim/plugged/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -49,9 +40,6 @@
 [submodule "vim/plugged/vim-airline-themes"]
 	path = vim/plugged/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule "vim/plugged/ultisnips"]
-	path = vim/plugged/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "vim/plugged/typescript-vim"]
 	path = vim/plugged/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git

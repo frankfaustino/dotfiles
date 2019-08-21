@@ -1,5 +1,5 @@
 source ~/.bashrc
-export PS1="💰 \[\e[91m\]▸\[\e[m\] "
+# export PS1="💰 \[\e[91m\]▸\[\e[m\] "
 # export PS1="💰 ◂"
 # export PS1="\[\e[91m\]λ\[\e[m\]"
 # export CLICOLOR=1
@@ -7,8 +7,4 @@ export PS1="💰 \[\e[91m\]▸\[\e[m\] "
 
 # Setting PATH for Python 3.7
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-export PATH
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export PATH="/Users/frank/Library/Android/sdk/platform-tools:$PATH"
+# PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"

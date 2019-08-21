@@ -60,7 +60,7 @@ set lazyredraw                  "lz:    will not redraw the screen while running
 " remap jk to escape
 inoremap jk <Esc>
 " \d toggles NERDTree
-nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <Leader>d :NERDTreeToggle<CR>
 " [s moves cursor to previous lint error
 nmap <silent> [s <Plug>(ale_previous_wrap)
 " ]s moves cursor to next lint error
@@ -73,9 +73,10 @@ nmap <leader>; :lopen<CR>
 " ————— Plugins ———————————————————————————————————————————————————————
 
 call plug#begin('~/.vim/plugged')
-Plug 'dracula/vim', { 'as': 'dracula' }  " dracula theme
-Plug 'mhartington/oceanic-next'       " oceanic-next theme
-Plug 'gertjanreynaert/cobalt2-vim-theme' " port of wes bos's cobalt2 theme
+Plug 'connorholyday/vim-snazzy'       " snazzy theme 
+" Plug 'mhartington/oceanic-next'       " oceanic-next theme
+" Plug 'dracula/vim', { 'as': 'dracula' }  " dracula theme
+" Plug 'gertjanreynaert/cobalt2-vim-theme' " port of wes bos's cobalt2 theme
 Plug 'bling/vim-airline'              " airline statusbar
 Plug 'vim-airline/vim-airline-themes' " airline statusbar themes
 Plug 'yggdroot/indentline'            " display the indention levels with thin vertical lines
@@ -98,7 +99,7 @@ call plug#end()
 
 " ————— Color Scheme ——————————————————————————————————————————————————
 
-colorscheme cobalt2
+colorscheme snazzy
 " let g:dracula_italic = 0
 " highlight Normal ctermbg=None
 " let g:oceanic_next_terminal_bold = 1
@@ -123,6 +124,8 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDTreeRespectWildIgnore = 1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Closes NERDTree if it's the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " ————— vim-airline ———————————————————————————————————————————————————
 let g:airline_left_sep=''
@@ -150,7 +153,7 @@ let g:ale_linters.typescript = ['tslint', 'tsserver']
 let g:ale_fixers = {}
 let g:ale_fixers.javascript = ['eslint', 'prettier']
 let g:ale_fixers.typescript = ['tslint']
-" let g:ale_javascript_prettier_options = ' --single-quote --trailing-comma none'
+let g:ale_javascript_prettier_options = ' --single-quote --trailing-comma none'
 
 " ————— Prettier ——————————————————————————————————————————————————————
 let g:prettier#config#semi = 'false'
