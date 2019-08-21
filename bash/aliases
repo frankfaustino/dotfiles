@@ -10,8 +10,10 @@ alias ll="ls -alh"
 alias lsa="ls -lGa"
 
 # Shortcuts
-alias docs="cd ~/Documents"
-alias dt="cd ~/Desktop"
-alias lambda="cd ~/Documents/Lambda-School"
+alias c="cd ~/Code"
+alias d="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+alias doc="cd ~/Documents"
+alias dotfiles="cd ~/.dotfiles"
 alias python='python3'
 alias pip='pip3'
