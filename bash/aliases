@@ -10,6 +10,7 @@ alias ll="ls -alh"
 alias lsa="ls -lGa"
 
 # Shortcuts
+alias src="cd ~/src"
 alias c="cd ~/Code"
 alias d="cd ~/Desktop"
 alias dl="cd ~/Downloads"
