@@ -11,10 +11,9 @@ function relink() {
 
 cd ~
 
-relink ~/.zshenv ~/.dotfiles/zsh/.zshenv
-relink ~/.zshrc ~/.dotfiles/zsh/.zshrc
+relink ~/.zshenv ~/.dotfiles/zsh/zshenv
+relink ~/.zshrc ~/.dotfiles/zsh/zshrc
 relink ~/.vimrc ~/.dotfiles/vim/vimrc
-relink ~/.vim ~/.dotfiles/vim/
 relink ~/.config/nvim/init.vim ~/.dotfiles/nvim/init.vim
 
 echo "dotfiles update complete"
