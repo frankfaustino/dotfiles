@@ -17,7 +17,6 @@ set backspace=indent,eol,start  "       delete over line breaks, or automaticall
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%120v', 100)
                                 "       highlights character at 81st column
-
 " ————— Folding ———————————————————————————————————————————————————————
 set foldmethod=syntax           "fdm:   fold by the indentation by default
 set foldnestmax=10              "fdn:   deepest fold is 10 levels
@@ -73,10 +72,11 @@ nmap <leader>; :lopen<CR>
 " ————— Plugins ———————————————————————————————————————————————————————
 
 call plug#begin('~/.vim/plugged')
-Plug 'connorholyday/vim-snazzy'       " snazzy theme 
+" Plug 'connorholyday/vim-snazzy'       " snazzy theme 
 " Plug 'mhartington/oceanic-next'       " oceanic-next theme
-" Plug 'dracula/vim', { 'as': 'dracula' }  " dracula theme
+Plug 'dracula/vim', { 'as': 'dracula' }  " dracula theme
 " Plug 'gertjanreynaert/cobalt2-vim-theme' " port of wes bos's cobalt2 theme
+Plug 'kaicataldo/material.vim', { 'branch': 'main' } " material theme port
 Plug 'bling/vim-airline'              " airline statusbar
 Plug 'vim-airline/vim-airline-themes' " airline statusbar themes
 Plug 'yggdroot/indentline'            " display the indention levels with thin vertical lines
@@ -99,9 +99,13 @@ call plug#end()
 
 " ————— Color Scheme ——————————————————————————————————————————————————
 
-colorscheme snazzy
-" let g:dracula_italic = 0
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'lighter'
+" 'lighter' " 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker' | 'default-community' | 'palenight-community' | 'ocean-community' | 'lighter-community' | 'darker-community'
+let g:dracula_italic = 0
+colorscheme material
 " highlight Normal ctermbg=None
+" highlight nonText ctermbg=NONE
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
 
