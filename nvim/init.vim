@@ -22,6 +22,8 @@ set noshowmode                  "smd:   hides current vi mode in lower left (hid
  
 " remap jk to escape
 inoremap jk <Esc>
+" \d toggles NERDTree
+nnoremap <Leader>d :NERDTreeToggle<CR>
 
 " ————— Plugins ———————————————————————————————————————————————————————
 
