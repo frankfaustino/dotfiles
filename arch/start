@@ -1,7 +1,0 @@
-#!/bin/sh
-
-#feh --no-fehbg --bg-fill '/home/frank/wallpapers/Big Sur Road.heic' 
-feh --no-fehbg --bg-fill '/home/frank/wallpapers/Big Sur Graphic Day.heic'
-fc-cache -f -v
-polybar --config=~/.config/polybar/config -r bar &
-nmcli device wifi con COLEY_EXT
