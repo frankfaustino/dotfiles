@@ -2,17 +2,13 @@
 
 ### Requirements
 
-zsh (comes with MacOS Catalina and later versions)
-ohmyzsh
-https://github.com/spaceship-prompt/spaceship-prompt
-brew install zsh-syntax-highlighting
-Python 3.10
-nvm
-homebrew
-
-Git — v2.20.1  
-Vim — v8.1.22  
-MacVim
+- git v2.32.1 
+- nvim v0.7.2 
+- vim v8.2  
+- zsh (comes with MacOS Catalina and later versions)
+- [zsh spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt)
+- ohmyzsh
+- brew install zsh-syntax-highlighting
 
 ### Installation
 
