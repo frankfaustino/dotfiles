@@ -1,6 +1,4 @@
 " ————— Options ———————————————————————————————————————————————————————
-
-set mouse=a						"	enable the use of mouse
 set termguicolors				"	use full 24-bit colors
 set ruler                       "ru:    show the cursor position all the time
 
@@ -14,8 +12,9 @@ set smarttab					"sta:	helps with backspacing because of expandtab
 
 " ————— HUD & Status Info —————————————————————————————————————————————
 
-set number						"	enable line numbers
+set number relativenumber       "	    enable 'hybrid' line numbers
 set numberwidth=4               "nuw:   width of number column
+set cursorline                  "       highlights cursor line
 set noshowmode                  "smd:   hides current vi mode in lower left (hidden for lightline)
 
 " ————— Mappings ——————————————————————————————————————————————————————
@@ -24,6 +23,9 @@ set noshowmode                  "smd:   hides current vi mode in lower left (hid
 inoremap jk <Esc>
 " \d toggles NERDTree
 nnoremap <Leader>d :NERDTreeToggle<CR>
+" move between buffers
+nnoremap <C-J> :bprev<CR>
+nnoremap <C-K> :bnext<CR>
 
 " ————— Plugins ———————————————————————————————————————————————————————
 
@@ -31,10 +33,17 @@ call plug#begin()
 	Plug 'itchyny/lightline.vim'                            " lightline status bar
 	Plug 'kaicataldo/material.vim', { 'branch': 'main' }    " material theme
 	Plug 'Yggdroot/indentLine'							    " displays lines at each indentation level
-	Plug 'https://github.com/pangloss/vim-javascript'	    " JavaScript syntax highlighting
-    Plug 'leafgarland/typescript-vim'                       " Typescript syntax
-    Plug 'suan/vim-instant-markdown'                        " markdown live previewing
-    Plug 'scrooloose/nerdtree'                              " filesystem explorer
+    " Plug 'suan/vim-instant-markdown'                        " markdown live previewing
+    Plug 'ellisonleao/glow.nvim'                            " markdown preview
+    Plug 'preservim/nerdtree'                               " NERDTree
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}         " auto completion
+    Plug 'b3nj5m1n/kommentary'                              " comment text
+    Plug 'kylechui/nvim-surround'                           " surround selections
+    Plug 'AndrewRadev/splitjoin.vim'                        " toggles between single-line / multi-line statements
+    Plug 'f-person/git-blame.nvim'                          " shows git blame
+    Plug 'airblade/vim-gitgutter'                           " shows git diff in the sign column
+    Plug 'norcalli/nvim-colorizer.lua'                      " color highlighter
+	Plug 'pangloss/vim-javascript'	                        " JavaScript syntax highlighting
 call plug#end()
 
 " ————— UI ————————————————————————————————————————————————————————————
@@ -49,3 +58,9 @@ let g:javascript_plugin_jsdoc = 1		            " enables syntax highlighting for
 
 let g:indentLine_char = '･'                         " specifies the character used to mark indentation
 " let g:indentLine_char_list = ['･', '˟', 'ˑ', '⌇', '◦', '⋅', '⋮']
+
+" ————— UI ————————————————————————————————————————————————————————————
+
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+

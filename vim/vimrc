@@ -77,8 +77,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }  " dracula theme
 " Plug 'gertjanreynaert/cobalt2-vim-theme' " port of wes bos's cobalt2 theme
 Plug 'kaicataldo/material.vim', { 'branch': 'main' } " material theme port
-Plug 'bling/vim-airline'              " airline statusbar
-Plug 'vim-airline/vim-airline-themes' " airline statusbar themes
 Plug 'yggdroot/indentline'            " display the indention levels with thin vertical lines
 Plug 'leafgarland/typescript-vim'     " Typescript syntax
 Plug 'othree/yajs.vim'                " yet another JavaScript syntax
@@ -130,14 +128,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Closes NERDTree if it's the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" ————— vim-airline ———————————————————————————————————————————————————
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_extensions = ['ale', 'branch']
-let g:airline_theme='simple'
-let g:airline#extensions#ale#error_symbol = '🤬 '
-let g:airline#extensions#ale#warning_symbol = '👻 '
 
 " ————— vim-fugitive ——————————————————————————————————————————————————
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
