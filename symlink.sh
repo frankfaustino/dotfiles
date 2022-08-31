@@ -15,6 +15,7 @@ relink ~/.zshenv ~/.dotfiles/zsh/zshenv
 relink ~/.zshrc ~/.dotfiles/zsh/zshrc
 relink ~/.vimrc ~/.dotfiles/vim/vimrc
 relink ~/.config/nvim/init.lua ~/.dotfiles/nvim/init.lua
+relink ~/.config/nvim/lua/mappings.lua ~/.dotfiles/nvim/mappings.lua
 relink ~/.config/nvim/lua/config.lua ~/.dotfiles/nvim/config.lua
 relink ~/.config/nvim/lua/plugins.lua ~/.dotfiles/nvim/plugins.lua
 
