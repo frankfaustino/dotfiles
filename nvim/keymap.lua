@@ -7,7 +7,7 @@ function map(mode, key_combo, command, config)
 end
 
 -- Keymap ——————————————————————————————————————————————————————
- 
+
 --  remap jk to escape
 map('i', 'jk', '<esc>')
 --  \d toggles NERDTree
@@ -16,10 +16,13 @@ map('n', '<leader>d', ':NERDTreeToggle<cr>')
 map('n', '<c-j>', ':bprev<cr>')
 map('n', '<c-k>', ':bnext<cr>')
 -- use Enter key for coc completion
-map('i', '<CR>', 'coc#pum#visible() ? coc#pum#confirm() : "<CR>"', { noremap = true, silent = true, expr = true })
+map('i', '<cr>', 'coc#pum#visible() ? coc#pum#confirm() : "<cr>"', { noremap = true, silent = true, expr = true })
 -- telescope
-map('n', 'ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<CR>')
-map('n', 'fg', '<cmd>lua require("telescope.builtin").live_grep({cwd = "%:h"})<CR>')
-map('n', 'fb', '<cmd>lua require("telescope.builtin").buffers({cwd = "%:h"})<CR>')
-map('n', 'fh', '<cmd>lua require("telescope.builtin").help_tags({cwd = "%:h"})<CR>')
-
+map('n', 'ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>')
+map('n', 'fg', '<cmd>lua require("telescope.builtin").live_grep({cwd = "%:h"})<cr>')
+map('n', 'fb', '<cmd>lua require("telescope.builtin").buffers({cwd = "%:h"})<cr>')
+map('n', 'fh', '<cmd>lua require("telescope.builtin").help_tags({cwd = "%:h"})<cr>')
+-- toggle listchars
+map('n', '<f3>', ':set list! list?<cr>')
+-- toggle search highlighting
+map('n', '<esc>', ':noh<cr>')
