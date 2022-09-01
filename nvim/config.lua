@@ -22,7 +22,7 @@ vim.opt.showmode = false                            -- hides current vi mode in 
 
 -- editor / Plugins ——————————————————————————————————————————————
 
-vim.g.material_theme_style = 'darker-community'     -- material theme style    
+vim.g.material_theme_style = 'lighter-community'     -- material theme style
 vim.g.material_terminal_italics = 1                 -- enables italics in theme
 vim.cmd('colorscheme material')                     -- sets colorscheme
 
@@ -47,4 +47,4 @@ vim.opt.listchars = {
     precedes = '«',
     extends = '»'
 }
-vim.opt.list = true
+vim.opt.list = false

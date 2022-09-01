@@ -1,13 +1,15 @@
-PYTHON=~/.pyenv/shims/python
-# PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
-
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Rust
+. "$HOME/.cargo/env"
 
 # nvm and nvm bash_completion
 NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+PYTHON=~/.pyenv/shims/python
 
 # pyenv && virtualenv
 eval "$(pyenv init --path)"
@@ -18,16 +20,12 @@ eval "$(pyenv virtualenv-init -)"
 JENV="$HOME/.jenv/bin"
 eval "$(jenv init -)"
 
-# Alternative location for .zshenv, .zprofile, .zshrc
-ZDOTDIR=~/.dotfiles/zsh
-
-# For pip install cryptography
+# for pip install cryptography
 CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
 LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
-# For pip install confluent kafka
+# for pip install confluent kafka
 C_INCLUDE_PATH=/opt/homebrew/Cellar/librdkafka/1.8.2/include/
 LIBRARY_PATH=/opt/homebrew/Cellar/librdkafka/1.8.2/lib
 
-export PATH=$JENV:$MYSQL_CLIENT:$OPENSSL:$MYSQLCLIENT_CFLAGS:$MYSQLCLIENT_LDFLAGS:$CPPFLAGS:$LDFLAGS:$C_INCLUDE_PATH:$LIBRARY_PATH:$PYTHON:$PATH
+export PATH=$JENV:$CPPFLAGS:$LDFLAGS:$C_INCLUDE_PATH:$LIBRARY_PATH:$PYTHON:$PATH
 
-. "$HOME/.cargo/env"
