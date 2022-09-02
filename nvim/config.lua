@@ -1,45 +1,47 @@
+local cmd, g, o, opt = vim.cmd, vim.g, vim.o, vim.opt
+
 -- Options ———————————————————————————————————————————————————————
 
-vim.opt.termguicolors = true                        -- use full 24-bit colors
-vim.opt.ruler = true                                -- show the cursor position all the time
+opt.termguicolors = true                        -- use full 24-bit colors
+opt.ruler = true                                -- show the cursor position all the time
 
 -- Tabs ——————————————————————————————————————————————————————————
 
-vim.opt.autoindent = true
-vim.opt.tabstop = 4                                 -- number of spaces that a tab renders as
-vim.opt.shiftwidth = 4                              -- number of spaces to use for autoindent
-vim.opt.softtabstop = 4                             -- number of spaces that tabs insert
-vim.opt.expandtab = true                            -- uses spaces instead of tab characters
-vim.opt.smarttab = true                             -- helps with backspacing because of expandtab
+opt.autoindent = true
+opt.tabstop = 4                                 -- number of spaces that a tab renders as
+opt.shiftwidth = 4                              -- number of spaces to use for autoindent
+opt.softtabstop = 4                             -- number of spaces that tabs insert
+opt.expandtab = true                            -- uses spaces instead of tab characters
+opt.smarttab = true                             -- helps with backspacing because of expandtab
 
 -- HUD & Status Info —————————————————————————————————————————————
 
-vim.opt.number = true
-vim.opt.relativenumber = true                       -- enable 'hybrid' line numbers
-vim.opt.numberwidth = 4                             -- width of number column
-vim.opt.cursorline = true                           -- highlights cursor line
-vim.opt.showmode = false                            -- hides current vi mode in lower left (hidden for lightline)
+opt.number = true
+opt.relativenumber = true                       -- enable 'hybrid' line numbers
+opt.numberwidth = 4                             -- width of number column
+opt.cursorline = true                           -- highlights cursor line
+opt.showmode = false                            -- hides current vi mode in lower left (hidden for lightline)
 
 -- editor / Plugins ——————————————————————————————————————————————
 
-vim.g.material_theme_style = 'lighter-community'     -- material theme style
-vim.g.material_terminal_italics = 1                 -- enables italics in theme
-vim.cmd('colorscheme material')                     -- sets colorscheme
+g.material_theme_style = 'lighter-community'     -- material theme style
+g.material_terminal_italics = 1                 -- enables italics in theme
+cmd('colorscheme material')                     -- sets colorscheme
 
-vim.g.lightline = { colorscheme = 'material_vim' }  -- sets status bar colorscheme
+g.lightline = { colorscheme = 'material_vim' }  -- sets status bar colorscheme
 
 -- vim-javascript
-vim.g.javascript_plugin_jsdoc = 1                   -- enables syntax highlighting for JSDocs
+g.javascript_plugin_jsdoc = 1                   -- enables syntax highlighting for JSDocs
 
 -- indentLine
-vim.g.indentLine_char = '･'                         -- specifies the character used to mark indentation
+g.indentLine_char = '･'                         -- specifies the character used to mark indentation
 
 -- NERDTree
-vim.g.NERDTreeDirArrowExpandable = "+"
-vim.g.NERDTreeDirArrowCollapsible = "~"
+g.NERDTreeDirArrowExpandable = "+"
+g.NERDTreeDirArrowCollapsible = "~"
 
 -- listchars
-vim.opt.listchars = {
+opt.listchars = {
     space = '･',
     tab = '▐▐',         -- (▸·) 2nd char repeated for each space
     trail = '·',        -- trailing spaces
@@ -47,4 +49,27 @@ vim.opt.listchars = {
     precedes = '«',
     extends = '»'
 }
-vim.opt.list = false
+opt.list = false
+
+-- vimwiki
+g.vimwiki_list = {{ path = '~/notes', syntax = 'markdown', ext = '.md' }}
+g.vimwiki_listsyms = ' ○◎●✔'
+
+-- text behaviour
+-- o.formatoptions = o.formatoptions
+--                    + 't'    -- auto-wrap text using textwidth
+--                    + 'c'    -- auto-wrap comments using textwidth
+--                    + 'r'    -- auto insert comment leader on pressing enter
+--                    - 'o'    -- don't insert comment leader on pressing o
+--                    + 'q'    -- format comments with gq
+--                    - 'a'    -- don't autoformat the paragraphs (use some formatter instead)
+--                    + 'n'    -- autoformat numbered list
+--                    - '2'    -- I am a programmer and not a writer
+--                    + 'j'    -- join comments smartly
+-- there has to be a better way (?)
+vim.cmd [[
+    au BufWinEnter * set formatoptions+=tcrqnj formatoptions-=o
+    au BufRead     * set formatoptions+=tcrqnj formatoptions-=o
+    au BufNewFile  * set formatoptions+=tcrqnj formatoptions-=o
+]]
+

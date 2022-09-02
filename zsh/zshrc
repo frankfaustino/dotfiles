@@ -11,7 +11,9 @@ export ZSH="/Users/francis/.oh-my-zsh"
 ZSH_THEME="spaceship"
 
 # https://spaceship-prompt.sh/options/
-SPACESHIP_CHAR_SYMBOL="💰"
+SPACESHIP_CHAR_SYMBOL="🤩"
+# SPACESHIP_CHAR_SYMBOL=" \uf0e7"
+# SPACESHIP_CHAR_PREFIX="\uf296"
 SPACESHIP_CHAR_SUFFIX=(" ")
 
 # Set list of themes to pick from when loading at random
@@ -107,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nv="nvim"
+alias v="nvim"
 alias vim="nvim"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
