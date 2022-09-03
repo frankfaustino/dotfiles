@@ -1,0 +1,23 @@
+#!/bin/sh
+
+ln -s $@ ~/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+ln -s $@ ~/.dotfiles/kitty/macos-launch-services-cmdline ~/.config/kitty/kmacos-launch-services-cmdline
+
+ln -s $@ ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s $@ ~/.dotfiles/tmux/tmux_dark_theme.conf ~/.tmux_dark_theme.conf
+ln -s $@ ~/.dotfiles/tmux/tmux_light_theme.conf ~/.tmux_light_theme.conf
+
+ln -s $@ ~/.dotfiles/zsh/zshenv ~/.zshenv
+ln -s $@ ~/.dotfiles/zsh/zshrc ~/.zshrc
+
+ln -s $@ ~/.dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+ln -s $@ ~/.dotfiles/nvim/config.lua ~/.config/nvim/lua/config.lua
+ln -s $@ ~/.dotfiles/nvim/utils.lua ~/.config/nvim/lua/utils.lua
+ln -s $@ ~/.dotfiles/nvim/keymap.lua ~/.config/nvim/lua/keymap.lua
+ln -s $@ ~/.dotfiles/nvim/material_config.lua ~/.config/nvim/lua/material_config.lua
+ln -s $@ ~/.dotfiles/nvim/plugins.lua ~/.config/nvim/lua/plugins.lua
+
+ln -s $@ ~/.dotfiles/task/taskrc ~/.taskrc
+
+echo "dotfiles update complete"
+
