@@ -9,7 +9,8 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-web-devicons'                      -- icons for telescope file browser
     use { 'neoclide/coc.nvim', branch = 'release' }         -- auto completion
     use 'itchyny/lightline.vim'                             -- lightline status bar
-    use { 'kaicataldo/material.vim', branch = 'main' }      -- material theme
+    use { 'kaicataldo/material.vim', branch = 'main' }      -- material theme (material.nvim doesn't support vimwiki)
+    -- use 'marko-cerovac/material.nvim'                       -- material theme
     use 'Yggdroot/indentLine'                               -- displays lines at each indentation level
     use 'b3nj5m1n/kommentary'                               -- comment text
     use({

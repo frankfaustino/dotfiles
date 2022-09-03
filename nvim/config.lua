@@ -24,21 +24,17 @@ opt.showmode = false                            -- hides current vi mode in lowe
 
 -- editor / Plugins ——————————————————————————————————————————————
 
-g.material_theme_style = 'lighter-community'     -- material theme style
-g.material_terminal_italics = 1                 -- enables italics in theme
-cmd('colorscheme material')                     -- sets colorscheme
+g.material_theme_style = 'darker'               -- material theme style
+g.material_terminal_italics = 1                 -- enables italics
+cmd('colorscheme material')
 
-g.lightline = { colorscheme = 'material_vim' }  -- sets status bar colorscheme
+g.lightline = { colorscheme = 'material' }
 
 -- vim-javascript
 g.javascript_plugin_jsdoc = 1                   -- enables syntax highlighting for JSDocs
 
 -- indentLine
 g.indentLine_char = '･'                         -- specifies the character used to mark indentation
-
--- NERDTree
-g.NERDTreeDirArrowExpandable = "+"
-g.NERDTreeDirArrowCollapsible = "~"
 
 -- listchars
 opt.listchars = {
@@ -72,4 +68,5 @@ vim.cmd [[
     au BufRead     * set formatoptions+=tcrqnj formatoptions-=o
     au BufNewFile  * set formatoptions+=tcrqnj formatoptions-=o
 ]]
+
 
