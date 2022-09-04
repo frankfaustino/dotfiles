@@ -1,23 +1,41 @@
-#!/bin/sh
+#!/bin/bash
 
-function relink() {
-  if [ -f $1 ]; then
-    rm $1
-    echo "deleted file $1"
-  fi
-  ln -s $2 $1
-  echo "linked $2 to $1"
+CONFIG=$HOME/.config
+KITTY=$CONFIG/kitty
+NVIM=$CONFIG/nvim
+
+function mkdirs() {
+    if [ ! -d $1 ]; then
+        mkdir -p $1
+        echo $1 "directory created"
+    fi
 }
 
-relink ~/.config/kitty/kitty.conf ~/.dotfiles/kitty/kitty.conf
-relink ~/.tmux.conf ~/.dotfiles/tmux/tmux.conf
-relink ~/.zshenv ~/.dotfiles/zsh/zshenv
-relink ~/.zshrc ~/.dotfiles/zsh/zshrc
-relink ~/.config/nvim/init.lua ~/.dotfiles/nvim/init.lua
-relink ~/.config/nvim/lua/keymap.lua ~/.dotfiles/nvim/keymap.lua
-relink ~/.config/nvim/lua/config.lua ~/.dotfiles/nvim/config.lua
-relink ~/.config/nvim/lua/plugins.lua ~/.dotfiles/nvim/plugins.lua
-relink ~/.taskrc ~/.dotfiles/task/taskrc
+function relink() {
+    if [ -f $1 ]; then
+        rm $1
+        echo $1 "was deleted"
+    else echo $1 "doesn't exist"
+    fi
+
+    ln -s $2 $1
+    echo "linked $2 to $1"
+}
+
+mkdirs $CONFIG
+mkdirs $KITTY
+mkdirs $NVIM
+
+relink $HOME/.zshenv $HOME/dotfiles/zsh/zshenv
+relink $HOME/.zshrc $HOME/dotfiles/zsh/zshrc
+relink $KITTY/kitty.conf $HOME/dotfiles/kitty/kitty.conf
+relink $KITTY/kitty/macos-launch-services-cmdline $HOME/dotfiles/kitty/macos-launch-services-cmdline
+relink $HOME/.tmux.conf $HOME/dotfiles/tmux/tmux.conf
+relink $NVIM/init.lua $HOME/dotfiles/nvim/init.lua
+relink $NVIM/lua/keymap.lua $HOME/dotfiles/nvim/keymap.lua
+relink $NVIM/lua/config.lua $HOME/dotfiles/nvim/config.lua
+relink $NVIM/lua/plugins.lua $HOME/dotfiles/nvim/plugins.lua
+relink $HOME/.taskrc $HOME/dotfiles/task/taskrc
 
 echo "dotfiles update complete"
 

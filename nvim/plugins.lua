@@ -4,6 +4,13 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'nvim-lua/plenary.nvim'                             -- functions — used by gitsigns and telescope
     use 'nvim-treesitter/nvim-treesitter'
+    use 'mhinz/vim-startify'
+    use {                                                   -- welcome screen
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
+    }
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }  -- telescope
     use { 'nvim-telescope/telescope-file-browser.nvim' }    -- telescope file browser
     use 'kyazdani42/nvim-web-devicons'                      -- icons for telescope file browser
@@ -33,6 +40,7 @@ return require('packer').startup(function()
     use 'ellisonleao/glow.nvim'                             -- markdown preview
     use 'vimwiki/vimwiki'
     use 'norcalli/nvim-colorizer.lua'                       -- color highlighter
+    use 'edluffy/specs.nvim'
     use 'pangloss/vim-javascript'                           -- JavaScript syntax highlighting
     use 'sharksforarms/vim-rust'                            -- Rust
 end)
