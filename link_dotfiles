@@ -31,6 +31,8 @@ relink $HOME/.zshrc $HOME/dotfiles/zsh/zshrc
 relink $KITTY/kitty.conf $HOME/dotfiles/kitty/kitty.conf
 relink $KITTY/kitty/macos-launch-services-cmdline $HOME/dotfiles/kitty/macos-launch-services-cmdline
 relink $HOME/.tmux.conf $HOME/dotfiles/tmux/tmux.conf
+relink $HOME/.tmux_dark_theme.conf $HOME/dotfiles/tmux/tmux_dark_theme.conf
+relink $HOME/.tmux_light_theme.conf $HOME/dotfiles/tmux/tmux_light_theme.conf
 relink $NVIM/init.lua $HOME/dotfiles/nvim/init.lua
 relink $NVIM/lua/keymap.lua $HOME/dotfiles/nvim/keymap.lua
 relink $NVIM/lua/config.lua $HOME/dotfiles/nvim/config.lua

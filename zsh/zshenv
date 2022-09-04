@@ -27,5 +27,7 @@ LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
 C_INCLUDE_PATH=/opt/homebrew/Cellar/librdkafka/1.8.2/include/
 LIBRARY_PATH=/opt/homebrew/Cellar/librdkafka/1.8.2/lib
 
-export PATH=$JENV:$CPPFLAGS:$LDFLAGS:$C_INCLUDE_PATH:$LIBRARY_PATH:$PYTHON:$PATH
+SCRIPTS=$HOME/scripts
+UTILS=$HOME/utils
 
+export PATH=$JENV:$CPPFLAGS:$LDFLAGS:$C_INCLUDE_PATH:$LIBRARY_PATH:$PYTHON:$SCRIPTS:$UTILS:$PATH

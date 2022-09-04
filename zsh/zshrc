@@ -1,5 +1,11 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Start tmux and set theme
+if command -v tmux>/dev/null; then
+    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session -A -s main
+
+    # check if we have been switched to light, else go dark
+    [[ ! $(tmux show-environment | grep THEME) =~ 'THEME=light' ]] && 
+    tmux set-environment THEME dark
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/francis/.oh-my-zsh"
@@ -66,7 +72,12 @@ SPACESHIP_CHAR_SUFFIX=(" ")
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
+# don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+HISTIGNORE="cd:c:cl:clc:ls:l:..:...:....:sob:ut:f [^|]*"
+HISTSIZE=50000 # big history
+HISTFILESIZE=50000 # big history
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -111,6 +122,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
 alias vim="nvim"
+
+# switch between light and dark themes
+alias tl="tmux source-file ~/.tmux_light_theme.conf; tmux set-environment THEME 'light'"
+alias td="tmux source-file ~/.tmux_dark_theme.conf; tmux set-environment THEME 'dark'"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
