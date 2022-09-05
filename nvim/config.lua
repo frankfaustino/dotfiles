@@ -24,7 +24,7 @@ opt.showmode = false                            -- hides current vi mode in lowe
 
 -- editor / Plugins ——————————————————————————————————————————————
 
-g.material_theme_style = 'lighter'              -- material theme style
+g.material_theme_style = 'darker-community'     -- material theme style
 g.material_terminal_italics = 1                 -- enables italics in theme
 cmd('colorscheme material')                     -- sets colorscheme
 

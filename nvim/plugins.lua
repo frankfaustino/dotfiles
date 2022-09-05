@@ -43,4 +43,5 @@ return require('packer').startup(function()
     use 'edluffy/specs.nvim'
     use 'pangloss/vim-javascript'                           -- JavaScript syntax highlighting
     use 'sharksforarms/vim-rust'                            -- Rust
+    use 'rust-lang/rust.vim'
 end)
