@@ -44,4 +44,5 @@ return require('packer').startup(function()
     use 'pangloss/vim-javascript'                           -- JavaScript syntax highlighting
     use 'sharksforarms/vim-rust'                            -- Rust
     use 'rust-lang/rust.vim'
+    use 'puremourning/vimspector'                           -- debugger
 end)

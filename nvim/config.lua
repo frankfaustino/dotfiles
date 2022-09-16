@@ -36,10 +36,6 @@ g.javascript_plugin_jsdoc = 1                   -- enables syntax highlighting f
 -- indentLine
 g.indentLine_char = '･'                         -- specifies the character used to mark indentation
 
--- NERDTree
-g.NERDTreeDirArrowExpandable = "+"
-g.NERDTreeDirArrowCollapsible = "~"
-
 -- listchars
 opt.listchars = {
     space = '･',
@@ -53,6 +49,8 @@ opt.list = false
 
 -- vimwiki
 g.vimwiki_list = {{ path = '~/notes', syntax = 'markdown', ext = '.md' }}
+g.vimwiki_key_mappings = { table_mappings = 0 }
+g.vimwiki_global_ext = 0
 g.vimwiki_listsyms = ' ○◎●✔'
 
 -- text behaviour
@@ -68,8 +66,8 @@ g.vimwiki_listsyms = ' ○◎●✔'
 --                    + 'j'    -- join comments smartly
 -- there has to be a better way (?)
 vim.cmd [[
-    au BufWinEnter * set formatoptions+=tcrqnj formatoptions-=o
-    au BufRead     * set formatoptions+=tcrqnj formatoptions-=o
-    au BufNewFile  * set formatoptions+=tcrqnj formatoptions-=o
+    au BufWinEnter * set formatoptions+=tcqnj formatoptions-=o
+    au BufRead     * set formatoptions+=tcqnj formatoptions-=o
+    au BufNewFile  * set formatoptions+=tcqnj formatoptions-=o
 ]]
 
