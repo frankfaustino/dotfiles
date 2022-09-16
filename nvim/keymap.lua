@@ -15,6 +15,9 @@ map('n', '<leader>f', '<cmd>lua require "telescope".extensions.file_browser.file
 --  move between buffers
 map('n', '<c-j>', ':bprev<cr>')
 map('n', '<c-k>', ':bnext<cr>')
+-- save file with ctrl + s
+map('n', '<c-s>', ':w<cr>')
+map('i', '<c-s>', '<esc>:w<cr>a')
 -- use \ key for coc completion
 map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<cr>"', { silent = true, expr = true })
 -- telescope

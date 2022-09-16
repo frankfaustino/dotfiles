@@ -122,6 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
 alias vim="nvim"
+alias cat="bat"
 
 # switch between light and dark themes
 alias tl="tmux source-file ~/.tmux_light_theme.conf; tmux set-environment THEME 'light'"
