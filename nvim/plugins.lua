@@ -14,12 +14,17 @@ return require('packer').startup(function()
     use { 'nvim-telescope/telescope.nvim', tag = '0.1.0' }  -- telescope
     use { 'nvim-telescope/telescope-file-browser.nvim' }    -- telescope file browser
     use 'kyazdani42/nvim-web-devicons'                      -- icons for telescope file browser
+    use { 'ElPiloto/telescope-vimwiki.nvim',                -- telescope for vimwiki
+        run = function()
+            require('telescope').load_extension('vimwiki')
+        end
+    }
     use { 'neoclide/coc.nvim', branch = 'release' }         -- auto completion
     use 'itchyny/lightline.vim'                             -- lightline status bar
     use { 'kaicataldo/material.vim', branch = 'main' }      -- material theme
     use 'Yggdroot/indentLine'                               -- displays lines at each indentation level
     use 'b3nj5m1n/kommentary'                               -- comment text
-    use({
+    use {
         'kylechui/nvim-surround',                           -- surround text
         tag = '*', -- Use for stability; omit to use `main` branch for the latest features
         config = function()
@@ -27,7 +32,7 @@ return require('packer').startup(function()
                 -- Configuration here, or leave empty to use defaults
             })
         end
-    })
+    } 
     use 'AndrewRadev/splitjoin.vim'                         -- toggles between single-line / multi-line statements
     use {                                                   -- git signs
         'lewis6991/gitsigns.nvim',
@@ -37,7 +42,7 @@ return require('packer').startup(function()
         'iamcco/markdown-preview.nvim',
         run = function() vim.fn['mkdp#util#install']() end
     }
-    use 'ellisonleao/glow.nvim'                             -- markdown preview
+    -- use 'ellisonleao/glow.nvim'                             -- markdown preview
     use 'vimwiki/vimwiki'
     use 'norcalli/nvim-colorizer.lua'                       -- color highlighter
     use 'edluffy/specs.nvim'

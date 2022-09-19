@@ -57,7 +57,7 @@ g.vimwiki_listsyms = ' ○◎●✔'
 -- o.formatoptions = o.formatoptions
 --                    + 't'    -- auto-wrap text using textwidth
 --                    + 'c'    -- auto-wrap comments using textwidth
---                    + 'r'    -- auto insert comment leader on pressing enter
+--                    - 'r'    -- auto insert comment leader on pressing enter
 --                    - 'o'    -- don't insert comment leader on pressing o
 --                    + 'q'    -- format comments with gq
 --                    - 'a'    -- don't autoformat the paragraphs (use some formatter instead)
@@ -66,8 +66,8 @@ g.vimwiki_listsyms = ' ○◎●✔'
 --                    + 'j'    -- join comments smartly
 -- there has to be a better way (?)
 vim.cmd [[
-    au BufWinEnter * set formatoptions+=tcqnj formatoptions-=o
-    au BufRead     * set formatoptions+=tcqnj formatoptions-=o
-    au BufNewFile  * set formatoptions+=tcqnj formatoptions-=o
+    au BufWinEnter * set formatoptions+=tcqnj formatoptions-=ro
+    au BufRead     * set formatoptions+=tcqnj formatoptions-=ro
+    au BufNewFile  * set formatoptions+=tcqnj formatoptions-=ro
 ]]
 

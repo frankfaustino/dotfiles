@@ -11,7 +11,6 @@ end
 vim.g.mapleader = " "
 --  remap jk to escape
 map('i', 'jk', '<esc>')
-map('n', '<leader>f', '<cmd>lua require "telescope".extensions.file_browser.file_browser()<cr>')
 --  move between buffers
 map('n', '<c-j>', ':bprev<cr>')
 map('n', '<c-k>', ':bnext<cr>')
@@ -21,16 +20,19 @@ map('i', '<c-s>', '<esc>:w<cr>a')
 -- use \ key for coc completion
 map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<cr>"', { silent = true, expr = true })
 -- telescope
-map('n', 'ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>', { silent = true })
+map('n', 'ff', '<cmd>lua require "telescope".extensions.file_browser.file_browser()<cr>')
+map('n', 'fd', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>', { silent = true })
 map('n', 'fg', '<cmd>lua require("telescope.builtin").live_grep({cwd = "%:h"})<cr>', { silent = true })
 map('n', 'fb', '<cmd>lua require("telescope.builtin").buffers({cwd = "%:h"})<cr>', { silent = true })
 map('n', 'fh', '<cmd>lua require("telescope.builtin").help_tags({cwd = "%:h"})<cr>', { silent = true })
+map('n', 'fv', '<cmd>lua require("telescope").extensions.vimwiki.vimwiki()<cr>')
+map('n', 'fc', '<cmd>lua require("telescope").extensions.vimwiki.live_grep()<cr>')
 -- toggle listchars
 map('n', '<f3>', ':set list! list?<cr>')
 -- toggle search highlighting
 map('n', '<esc>', ':noh<cr>')
--- preview markdown in Glow
-map('n', '<leader>g', ':Glow<cr>')
+-- preview markdown
+map('n', '<leader>g', ':MarkdownPreview<cr>')
 -- vimspector
 map('n', '<leader>dd', ':call vimspector#Launch()<cr>')
 map('n', '<leader>de', ':call vimspector#Reset()<cr>')
