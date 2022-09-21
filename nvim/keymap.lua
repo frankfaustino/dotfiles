@@ -18,7 +18,7 @@ map('n', '<c-k>', ':bnext<cr>')
 map('n', '<c-s>', ':w<cr>')
 map('i', '<c-s>', '<esc>:w<cr>a')
 -- use \ key for coc completion
-map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<cr>"', { silent = true, expr = true })
+map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<tab>"', { silent = true, expr = true })
 -- telescope
 map('n', 'ff', '<cmd>lua require "telescope".extensions.file_browser.file_browser()<cr>')
 map('n', 'fd', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>', { silent = true })
