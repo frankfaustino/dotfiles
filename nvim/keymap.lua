@@ -15,8 +15,8 @@ map('n', '<leader>f', '<cmd>lua require "telescope".extensions.file_browser.file
 --  move between buffers
 map('n', '<c-j>', ':bprev<cr>')
 map('n', '<c-k>', ':bnext<cr>')
--- use \ key for coc completion
-map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<cr>"', { silent = true, expr = true })
+-- use Tab key for coc completion
+map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<tab>"', { silent = true, expr = true })
 -- telescope
 map('n', 'ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>', { silent = true })
 map('n', 'fg', '<cmd>lua require("telescope.builtin").live_grep({cwd = "%:h"})<cr>', { silent = true })
@@ -42,7 +42,7 @@ nmap <Leader>dj <Plug>VimspectorStepOver ]]
 
 -- coc-snippets
 -- Use <C-l> for trigger snippet expand.
-map('i', '\\', '<Plug>(coc-snippets-expand)')
+-- map('i', '\\', '<Plug>(coc-snippets-expand)')
 
 -- Use <C-j> for select text for visual placeholder of snippet.
 -- vmap <C-j> <Plug>(coc-snippets-select)

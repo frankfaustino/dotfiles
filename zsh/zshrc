@@ -1,32 +1,23 @@
 # Start tmux and set theme
-if command -v tmux>/dev/null; then
-    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session -A -s main
-
-    # check if we have been switched to light, else go dark
-    [[ ! $(tmux show-environment | grep THEME) =~ 'THEME=light' ]] && 
-    tmux set-environment THEME dark
-fi
+#if command -v tmux>/dev/null; then
+#    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && env TERM=screen-256color tmux new-session -A -s main
+#
+#    # check if we have been switched to light, else go dark
+#    [[ ! $(tmux show-environment | grep THEME) =~ 'THEME=light' ]] && 
+#    tmux set-environment THEME dark
+#fi
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/francis/.oh-my-zsh"
+export ZSH="/home/francis/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
 
 # https://spaceship-prompt.sh/options/
-SPACESHIP_CHAR_SYMBOL="🤩"
+SPACESHIP_CHAR_SYMBOL="⚡"
 # SPACESHIP_CHAR_SYMBOL=" \uf0e7"
 # SPACESHIP_CHAR_PREFIX="\uf296"
 SPACESHIP_CHAR_SUFFIX=(" ")
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,9 +79,19 @@ HISTFILESIZE=50000 # big history
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    copybuffer
+    copyfile
     git
-    macos
+    systemadmin
+    web-search
     zsh-autosuggestions
+    zsh-history-substring-search
+    zsh-syntax-highlighting
+)
+
+ZSH_WEB_SEARCH_ENGINES=(
+    reddit "https://reddit.com/search?q="
+    superuser "https://superuser.com/search?q="
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,10 +123,26 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
 alias vim="nvim"
+alias vw="v -c VimwikiIndex"
+alias cat="bat"
+alias t="task"
+alias ts="task '(-future and pro.not:home)' ls"
+alias tl="task list"
 
 # switch between light and dark themes
-alias tl="tmux source-file ~/.tmux_light_theme.conf; tmux set-environment THEME 'light'"
-alias td="tmux source-file ~/.tmux_dark_theme.conf; tmux set-environment THEME 'dark'"
+alias tmuxl="tmux source-file ~/.tmux_light_theme.conf; tmux set-environment THEME 'light'"
+alias tmuxd="tmux source-file ~/.tmux_dark_theme.conf; tmux set-environment THEME 'dark'"
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# https://unix.stackexchange.com/questions/285208/how-to-remove-a-zsh-keybinding-if-i-dont-know-what-it-does
+# https://thevaluable.dev/zsh-line-editor-configuration-mouseless/
+bindkey -r "^R" # formerly transpose-chars, replaced by fzf file widget
+bindkey -r "^T" # formerly transpose-chars, replaced by fzf history widget
 
+# fzf key bindings
+if [ -x "$(command -v fzf)"  ]
+then
+    source /usr/share/fzf/key-bindings.zsh
+fi
+
+# display pending work tasks
+ts

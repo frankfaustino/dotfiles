@@ -1,33 +1,15 @@
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # Rust
 . "$HOME/.cargo/env"
 
-# nvm and nvm bash_completion
-NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/francis/google-cloud-sdk/path.zsh.inc' ]; then . '/home/francis/google-cloud-sdk/path.zsh.inc'; fi
 
-PYTHON=~/.pyenv/shims/python
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/francis/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/francis/google-cloud-sdk/completion.zsh.inc'; fi
 
-# pyenv && virtualenv
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# Default text editors
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 
-# jEnv is a command line tool to help you forget how to set the JAVA_HOME environment variable
-JENV="$HOME/.jenv/bin"
-eval "$(jenv init -)"
+export PATH=$HOME/scripts:$PATH
 
-# for pip install cryptography
-CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include"
-LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib"
-# for pip install confluent kafka
-C_INCLUDE_PATH=/opt/homebrew/Cellar/librdkafka/1.8.2/include/
-LIBRARY_PATH=/opt/homebrew/Cellar/librdkafka/1.8.2/lib
-
-SCRIPTS=$HOME/scripts
-UTILS=$HOME/utils
-
-export PATH=$JENV:$CPPFLAGS:$LDFLAGS:$C_INCLUDE_PATH:$LIBRARY_PATH:$PYTHON:$SCRIPTS:$UTILS:$PATH

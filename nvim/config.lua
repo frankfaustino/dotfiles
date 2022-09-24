@@ -22,13 +22,15 @@ opt.numberwidth = 4                             -- width of number column
 opt.cursorline = true                           -- highlights cursor line
 opt.showmode = false                            -- hides current vi mode in lower left (hidden for lightline)
 
--- editor / Plugins ——————————————————————————————————————————————
+-- Themes ————————————————————————————————————————————————————————
 
+cmd('colorscheme nord')                         -- catppuccin, material, moonfly, nord, simple-dark, simple-dark-transparent
 g.material_theme_style = 'darker-community'     -- material theme style
 g.material_terminal_italics = 1                 -- enables italics in theme
-cmd('colorscheme material')                     -- sets colorscheme
+g.lightline = { colorscheme = 'moonfly' }       -- material_vim, moonfly
+g.catppuccin_flavour = 'latte'                  -- latte, frappe, macchiato, mocha
 
-g.lightline = { colorscheme = 'material_vim' }  -- sets status bar colorscheme
+-- editor / Plugins ——————————————————————————————————————————————
 
 -- vim-javascript
 g.javascript_plugin_jsdoc = 1                   -- enables syntax highlighting for JSDocs
@@ -48,7 +50,7 @@ opt.listchars = {
 opt.list = false
 
 -- vimwiki
-g.vimwiki_list = {{ path = '~/notes', syntax = 'markdown', ext = '.md' }}
+g.vimwiki_list = {{ path = '~/wiki', syntax = 'markdown', ext = '.md' }}
 g.vimwiki_key_mappings = { table_mappings = 0 }
 g.vimwiki_global_ext = 0
 g.vimwiki_listsyms = ' ○◎●✔'
