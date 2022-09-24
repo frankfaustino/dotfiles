@@ -60,6 +60,7 @@ urgency.uda.estimate.h8.coefficient=8.0
 report.list.columns=id,start.age,entry.age,depends.indicator,priority,estimate,project,tags,recur.indicator,scheduled.countdown,due,until.remaining,description.count,urgency
 report.list.labels=ID,Active,Age,D,P,Est,Project,Tags,R,Sch,Due,Until,Description,Urg
 
+# https://gist.github.com/kaushikgopal/356427665d19afbaa614f4dbda30f86d
 # Originally adapted from  https://github.com/arcticicestudio/igloo
 # License:    MIT
 
