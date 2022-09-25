@@ -7,28 +7,28 @@ set $mod Mod4
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 font pango:curie 9
 
-# autostart some shit
 # https://github.com/chmln/i3-auto-layout
-exec_always --no-startup-id i3-auto-layout
+exec_always --no-startup-id "i3-auto-layout"
 
 # start polybar and set bg
-exec_always --no-startup-id start
+exec_always --no-startup-id "start"
+
+# standby 15 mins, suspend 1 hour, off 2 hours
+exec xset dpms 900 3600 7200
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/francis/scripts/lock
-
-# standby 15 mins, suspend 1 hour, off 2 hours
-exec --no-startup-id xset dpms 900 3600 7200
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork 
+# exec --no-startup-id xss-lock -- /home/francis/scripts/lock
 
 # auto lock the screen
-exec --no-startup-id xautolock -detectsleep -time 60 -locker lock
+# exec xautolock -detectsleep -time 60 -locker ~/scripts/lock
+# xautolock -time 12 -locker "systemctl suspend" -detectsleep
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
-# key bindings
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -139,7 +139,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # lock screen
-bindsym $mod+Control+q exec --no-startup-id lock --blur=0x2.5
+# bindsym $mod+Control+q exec "i3lock --ignore-empty-password --show-failed-attempts -c 000000 --tiling --image=$HOME/wallpapers/carina-nebula.jpg"
+bindsym $mod+Control+q exec "~/scripts/lock --blur=0x2.5"
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -180,21 +181,17 @@ client.unfocused        #000d1010 #00212121 #d9d9d9 #424242 #00111111
 client.focused          #000000   #000000   #FFFFFF #000000 #000000
 
 # rofi
-bindsym $mod+space exec launch_rofi drun
-bindsym $mod+c exec launch_rofi run
-bindsym $mod+slash exec launch_rofi emoji
-
-# dotfiles
-bindsym $mod+d exec dotfiles
-for_window [class="Alacritty" instance="__dotfiles"] floating enable, resize set 1200 1000, move position center
+bindsym $mod+space exec "launch_rofi drun"
+bindsym $mod+d exec "launch_rofi run"
+bindsym $mod+slash exec "launch_rofi emoji"
 
 # vimwiki
 # https://major.io/2019/02/08/automatic-floating-windows-in-i3/
-bindsym $mod+v exec vimwiki
+bindsym $mod+v exec "/home/francis/scripts/vimwiki"
 for_window [class="Alacritty" instance="__vimwiki"] floating enable, resize set 1200 1000, move position center
 
 # https://www.reddit.com/r/i3wm/comments/mkjjaj/very_useful_i3_config_open_floating_window/
-bindsym $mod+g exec text_scratchpad
+bindsym $mod+g exec "/home/francis/scripts/text_scratchpad"
 for_window [class="Alacritty" instance="__text_scratchpad"] floating enable, resize set 1200 1000, move position center
 
 # for_window [floating] floating enable, resize set 450 150, move position center
@@ -208,7 +205,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+w kill
 
 # i3_keybinds
-bindsym $mod+i exec i3_keybinds
+bindsym $mod+i exec "i3_keybinds"
 
 # workspace specific settings
 assign [class="Synergy"] $ws10

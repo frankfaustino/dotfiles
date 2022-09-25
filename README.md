@@ -1,57 +1,13 @@
-# My Vim and Zsh Setup
+# My Setup
 
-### Requirements
+Just a backup of my setup dev environments.
 
-- git
-- kitty
-- tmux
-- nvim
-- task
-- zsh
-- ohmyzsh
-- [zsh spaceship prompt](https://github.com/spaceship-prompt/spaceship-prompt)
-- zsh-syntax-highlighting
+## TODO
+- use Ansible
+- differentiate between mac and linux envs (i.e., `/home` vs `/Users`)
+- different users
 
-### Installation
-
-```bash
-$ git clone https://github.com/frankfaustino/dotfiles.git ~/dotfiles
-$ cd ~/dotfiles
-```
-
-### Create symlinks
-```bash
-# This symlink script will delete and recreate the symlinks in your HOME directory.
-$ ./link_dotfiles
-```
-
-### ——— File Structure ———
-
-```bash
-.
-├── README.md
-├── kitty
-│   ├── kitty.conf
-│   └── macos-launch-services-cmdline
-├── link_dotfiles
-├── nvim
-│   ├── config.lua
-│   ├── init.lua
-│   ├── keymap.lua
-│   └── plugins.lua
-├── task
-│   └── taskrc
-├── tmux
-│   ├── tmux.conf
-│   ├── tmux_dark_theme.conf
-│   └── tmux_light_theme.conf
-└── zsh
-    ├── zprofile
-    ├── zshenv
-    └── zshrc
-```
-
-```
+```plaintext
       .       .    )        .           .
    .       *             .         .
                .                      .

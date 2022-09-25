@@ -15,6 +15,15 @@ map('n', '<leader>f', '<cmd>lua require "telescope".extensions.file_browser.file
 --  move between buffers
 map('n', '<c-j>', ':bprev<cr>')
 map('n', '<c-k>', ':bnext<cr>')
+-- toggle listchars
+map('n', '<f3>', ':set list! list?<cr>')
+-- clear search highlighting
+map('n', '<esc>', ':noh<cr>')
+-- move selected line up or down
+map('v', 'J', ":m '>+1<cr>gv=gv")
+map('v', 'K', ":m '<-2<cr>gv=gv") 
+
+-- Plugins Keymap
 -- use Tab key for coc completion
 map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<tab>"', { silent = true, expr = true })
 -- telescope
@@ -22,10 +31,6 @@ map('n', 'ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<
 map('n', 'fg', '<cmd>lua require("telescope.builtin").live_grep({cwd = "%:h"})<cr>', { silent = true })
 map('n', 'fb', '<cmd>lua require("telescope.builtin").buffers({cwd = "%:h"})<cr>', { silent = true })
 map('n', 'fh', '<cmd>lua require("telescope.builtin").help_tags({cwd = "%:h"})<cr>', { silent = true })
--- toggle listchars
-map('n', '<f3>', ':set list! list?<cr>')
--- toggle search highlighting
-map('n', '<esc>', ':noh<cr>')
 -- preview markdown in Glow
 map('n', '<leader>g', ':Glow<cr>')
 -- vimspector
