@@ -68,4 +68,12 @@ return require('packer').startup(function()
     use 'sharksforarms/vim-rust'                            -- Rust
     use 'rust-lang/rust.vim'
     use 'puremourning/vimspector'                           -- debugger
+    use({                                                   -- lspsaga
+        'glepnir/lspsaga.nvim',
+        branch = 'main',
+        config = function()
+            local saga = require('lspsaga')
+            saga.init_lsp_saga({})
+        end
+    })
 end)

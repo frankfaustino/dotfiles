@@ -1,3 +1,5 @@
+require('lspsaga').init_lsp_saga()
+
 function map(mode, key_combo, command, config)
     local options = { noremap = true }
     if config then
@@ -22,6 +24,16 @@ map('n', '<esc>', ':noh<cr>')
 -- move selected line up or down
 map('v', 'J', ":m '>+1<cr>gv=gv")
 map('v', 'K', ":m '<-2<cr>gv=gv") 
+-- page up or down (w/ cursor centered on screen)
+map('n', '<c-u>', '<c-u>zz')
+map('n', '<c-d>', '<c-d>zz')
+-- repeat latest search (w/ cursor centered on screen)
+map('n', 'n', 'nzzzv')
+map('n', 'N', 'Nzzzv')
+-- yank from cursor to the EOL
+map('n', 'Y', 'yg$')
+-- wtf? mark and join?
+map('n', 'J', 'mzJ`z')
 
 -- Plugins Keymap
 -- use Tab key for coc completion
@@ -39,6 +51,8 @@ map('n', '<leader>de', ':call vimspector#Reset()<cr>')
 map('n', '<leader>dc', ':call vimspector#Continue()<cr>')
 map('n', '<leader>dt', ':call vimspector#ToggleBreakpoint()<cr>')
 map('n', '<leader>dT', ':call vimspector#ClearBreakpoints()<cr>')
+-- lspsaga
+map('n', 'gr', '<cmd>Lspsaga rename<cr>', { silent = true })
 
 --[[ nmap <Leader>dk <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut

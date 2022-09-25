@@ -7,7 +7,10 @@ set $mod Mod4
 # font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
 font pango:curie 9
 
-# autostart some shit
+# autostart some shit ———————————————————————————————————————————————————————
+# compositor
+exec -no-startup-id picom -bc
+
 # https://github.com/chmln/i3-auto-layout
 exec_always --no-startup-id i3-auto-layout
 
@@ -28,7 +31,7 @@ exec --no-startup-id xautolock -detectsleep -time 60 -locker lock
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# key bindings
+# key bindings ———————————————————————————————————————————————————————————————
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -170,15 +173,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# borders
-for_window [class="^.*"] border pixel 0
-default_border pixel 0
-# default_floating_border pixel 0
-# class                 border    backgr.   text    indic8r child_border
-client.focused_inactive #000d1010 #00212121 #d9d9d9 #0d1010 #00222222
-client.unfocused        #000d1010 #00212121 #d9d9d9 #424242 #00111111
-client.focused          #000000   #000000   #FFFFFF #000000 #000000
-
 # rofi
 bindsym $mod+space exec launch_rofi drun
 bindsym $mod+c exec launch_rofi run
@@ -210,5 +204,14 @@ bindsym $mod+w kill
 # i3_keybinds
 bindsym $mod+i exec i3_keybinds
 
-# workspace specific settings
+# borders ———————————————————————————————————————————————————————————————
+for_window [class="^.*"] border pixel 0
+default_border pixel 0
+# default_floating_border pixel 0
+# class                 border    backgr.   text    indic8r child_border
+client.focused_inactive #000d1010 #00212121 #d9d9d9 #0d1010 #00222222
+client.unfocused        #000d1010 #00212121 #d9d9d9 #424242 #00111111
+client.focused          #000000   #000000   #FFFFFF #000000 #000000
+
+# workspace specific settings ————————————————————————————————————————————
 assign [class="Synergy"] $ws10
