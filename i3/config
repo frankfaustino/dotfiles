@@ -9,13 +9,10 @@ font pango:curie 9
 
 # autostart some shit ———————————————————————————————————————————————————————
 # compositor
-exec -no-startup-id picom -bc
+exec --no-startup-id picom -bc
 
 # https://github.com/chmln/i3-auto-layout
 exec_always --no-startup-id i3-auto-layout
-
-# start polybar and set bg
-exec_always --no-startup-id start
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.

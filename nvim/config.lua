@@ -24,11 +24,11 @@ opt.showmode = false                            -- hides current vi mode in lowe
 
 -- Themes ————————————————————————————————————————————————————————
 
-cmd('colorscheme catppuccin')                   -- catppuccin, material, moonfly, nord, simple-dark, simple-dark-transparent
+g.catppuccin_flavour = 'latte'                  -- latte, frappe, macchiato, mocha
 g.material_theme_style = 'darker-community'     -- material theme style
 g.material_terminal_italics = 1                 -- enables italics in theme
 g.lightline = { colorscheme = 'moonfly' }       -- material_vim, moonfly
-g.catppuccin_flavour = 'latte'                  -- latte, frappe, macchiato, mocha
+cmd('colorscheme catppuccin')                      -- catppuccin, material, moonfly, nord, simple-dark, simple-dark-transparent
 
 -- editor / Plugins ——————————————————————————————————————————————
 
