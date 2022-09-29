@@ -24,7 +24,7 @@ opt.showmode = false                            -- hides current vi mode in lowe
 
 -- Themes ————————————————————————————————————————————————————————
 
-cmd('colorscheme nord')                         -- catppuccin, material, moonfly, nord, simple-dark, simple-dark-transparent
+cmd('colorscheme catppuccin')                   -- catppuccin, material, moonfly, nord, simple-dark, simple-dark-transparent
 g.material_theme_style = 'darker-community'     -- material theme style
 g.material_terminal_italics = 1                 -- enables italics in theme
 g.lightline = { colorscheme = 'moonfly' }       -- material_vim, moonfly
@@ -54,6 +54,7 @@ g.vimwiki_list = {{ path = '~/wiki', syntax = 'markdown', ext = '.md' }}
 g.vimwiki_key_mappings = { table_mappings = 0 }
 g.vimwiki_global_ext = 0
 g.vimwiki_listsyms = ' ○◎●✔'
+g.vimwiki_url_maxsave = 0
 
 -- text behaviour
 -- o.formatoptions = o.formatoptions

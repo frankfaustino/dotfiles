@@ -139,10 +139,19 @@ bindkey -r "^R" # formerly transpose-chars, replaced by fzf file widget
 bindkey -r "^T" # formerly transpose-chars, replaced by fzf history widget
 
 # fzf key bindings
-if [ -x "$(command -v fzf)"  ]
-then
+if [ -x "$(command -v fzf)" ]; then
     source /usr/share/fzf/key-bindings.zsh
 fi
 
 # display pending work tasks
 ts
+
+# save path on cd (chpwd is a zsh hook)
+function chpwd {
+  pwd > ~/.last_dir
+}
+
+# restore last saved path on launch
+if [[ -f ~/.last_dir ]]; then
+  cd "`cat ~/.last_dir`"
+fi

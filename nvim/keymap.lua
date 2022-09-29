@@ -1,5 +1,3 @@
-require('lspsaga').init_lsp_saga()
-
 function map(mode, key_combo, command, config)
     local options = { noremap = true }
     if config then
@@ -52,8 +50,9 @@ map('n', '<leader>dc', ':call vimspector#Continue()<cr>')
 map('n', '<leader>dt', ':call vimspector#ToggleBreakpoint()<cr>')
 map('n', '<leader>dT', ':call vimspector#ClearBreakpoints()<cr>')
 -- lspsaga
-map('n', 'gr', '<cmd>Lspsaga rename<cr>', { silent = true })
-
+-- map('n', 'gr', '<cmd>Lspsaga rename<cr>', { silent = true })
+-- undotree
+map('n', '<f5>', '::UndotreeToggle<cr>')
 --[[ nmap <Leader>dk <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto
