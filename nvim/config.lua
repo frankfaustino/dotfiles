@@ -28,7 +28,7 @@ g.catppuccin_flavour = 'latte'                  -- latte, frappe, macchiato, moc
 g.material_theme_style = 'darker-community'     -- material theme style
 g.material_terminal_italics = 1                 -- enables italics in theme
 g.lightline = { colorscheme = 'moonfly' }       -- material_vim, moonfly
-cmd('colorscheme catppuccin')                      -- catppuccin, material, moonfly, nord, simple-dark, simple-dark-transparent
+cmd('colorscheme moonfly')                      -- catppuccin, material, moonfly, nord, simple-dark, simple-dark-transparent
 
 -- editor / Plugins ——————————————————————————————————————————————
 
@@ -51,7 +51,7 @@ opt.list = false
 
 -- vimwiki
 g.vimwiki_list = {{ path = '~/wiki', syntax = 'markdown', ext = '.md' }}
-g.vimwiki_key_mappings = { table_mappings = 0 }
+g.vimwiki_key_mappings = { table_mappings = 1 }
 g.vimwiki_global_ext = 0
 g.vimwiki_listsyms = ' ○◎●✔'
 g.vimwiki_url_maxsave = 0

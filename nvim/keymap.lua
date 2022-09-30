@@ -34,8 +34,9 @@ map('n', 'Y', 'yg$')
 map('n', 'J', 'mzJ`z')
 
 -- Plugins Keymap
--- use Tab key for coc completion
+-- use Tab key for vimwiki table or CoC completion
 map('i', '<tab>', 'coc#pum#visible() ? coc#pum#confirm() : "<tab>"', { silent = true, expr = true })
+-- map('i', '<tab>', 'vimwiki#tbl#kbd_tab() ? "<tab>" : coc#pum#confirm()"', { silent = true, expr = true })
 -- telescope
 map('n', 'ff', '<cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>', { silent = true })
 map('n', 'fg', '<cmd>lua require("telescope.builtin").live_grep({cwd = "%:h"})<cr>', { silent = true })
@@ -53,6 +54,7 @@ map('n', '<leader>dT', ':call vimspector#ClearBreakpoints()<cr>')
 -- map('n', 'gr', '<cmd>Lspsaga rename<cr>', { silent = true })
 -- undotree
 map('n', '<f5>', '::UndotreeToggle<cr>')
+
 --[[ nmap <Leader>dk <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto

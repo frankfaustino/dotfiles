@@ -126,7 +126,8 @@ alias vim="nvim"
 alias vw="v -c VimwikiIndex"
 alias cat="bat"
 alias t="task"
-alias ts="task '(-future and pro.not:home)' ls"
+# alias ts="task '(-future and pro.not:home)' ls"
+alias ts="task '(-future)' ls"
 alias tl="task list"
 
 # switch between light and dark themes

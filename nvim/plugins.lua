@@ -24,7 +24,7 @@ return require('packer').startup(function()
     use 'shaunsingh/nord.nvim'                              -- nord theme
     use 'Yggdroot/indentLine'                               -- displays lines at each indentation level
     use 'b3nj5m1n/kommentary'                               -- comment text
-    use { 'kylechui/nvim-surround', tag = '*' }             -- surround text
+    use 'tpope/vim-surround'                                -- surround text
     use 'AndrewRadev/splitjoin.vim'                         -- toggles between single-line / multi-line statements
     use 'lewis6991/gitsigns.nvim'                           -- git signs
     use 'ellisonleao/glow.nvim'                             -- markdown preview
